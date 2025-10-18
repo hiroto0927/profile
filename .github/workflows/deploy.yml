@@ -1,4 +1,4 @@
-name: Deploy My Profile To Github Pages
+name: Deploy My Profile To GitHub Pages
 
 on:
   pull_request:
