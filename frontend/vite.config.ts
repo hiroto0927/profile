@@ -5,7 +5,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === 'production' ? '/profile/' : '/',
+  base: "/profile/",
   resolve: {
     alias: {
       "@": path.resolve(
