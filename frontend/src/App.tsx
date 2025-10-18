@@ -1,9 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col items-center justify-center">
@@ -13,7 +11,7 @@ function App() {
           target="_blank"
           className="hover:scale-110 transition-transform"
         >
-          <img src={viteLogo} className="h-20 w-20" alt="Vite logo" />
+          <img src="/vite.svg" className="h-20 w-20" alt="Vite logo" />
         </a>
         <a
           href="https://react.dev"
@@ -21,7 +19,7 @@ function App() {
           className="hover:scale-110 transition-transform"
         >
           <img
-            src={reactLogo}
+            src="src/assets/react.svg"
             className="h-20 w-20 animate-spin"
             alt="React logo"
           />
@@ -29,7 +27,7 @@ function App() {
       </div>
 
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-        Vite + React + Tailwind CSS Hello
+        Vite + React + TypeScript + Tailwind CSS Hello World
       </h1>
 
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
