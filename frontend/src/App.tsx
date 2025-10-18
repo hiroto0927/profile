@@ -1,4 +1,6 @@
 import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -11,7 +13,7 @@ function App() {
           target="_blank"
           className="hover:scale-110 transition-transform"
         >
-          <img src="/vite.svg" className="h-20 w-20" alt="Vite logo" />
+          <img src={viteLogo} className="h-20 w-20" alt="Vite logo" />
         </a>
         <a
           href="https://react.dev"
@@ -19,7 +21,7 @@ function App() {
           className="hover:scale-110 transition-transform"
         >
           <img
-            src="src/assets/react.svg"
+            src={reactLogo}
             className="h-20 w-20 animate-spin"
             alt="React logo"
           />
