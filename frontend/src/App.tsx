@@ -3,52 +3,43 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 
 function App() {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col items-center justify-center">
-      <div className="flex gap-8 mb-8">
-        <a
-          href="https://vite.dev"
-          target="_blank"
-          className="hover:scale-110 transition-transform"
-        >
-          <img src={viteLogo} className="h-20 w-20" alt="Vite logo" />
+    <div className="max-w-5xl mx-auto p-8 text-center">
+      <div className="mb-8">
+        <a href="https://vite.dev" target="_blank">
+          <img
+            src={viteLogo}
+            className="logo h-24 p-6 inline-block transition-all duration-300"
+            alt="Vite logo"
+          />
         </a>
-        <a
-          href="https://react.dev"
-          target="_blank"
-          className="hover:scale-110 transition-transform"
-        >
+        <a href="https://react.dev" target="_blank">
           <img
             src={reactLogo}
-            className="h-20 w-20 animate-spin"
+            className="logo react h-24 p-6 inline-block transition-all duration-300"
             alt="React logo"
           />
         </a>
       </div>
-
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-        Vite + React + TypeScript + Tailwind CSS Hello World
-      </h1>
-
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <h1 className="text-4xl font-bold mb-8 text-white">Vite + React</h1>
+      <div className="card p-8 mb-8">
         <button
           onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200 mb-4"
+          className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded border border-gray-600 transition-colors duration-200"
         >
           count is {count}
         </button>
-        <p className="text-gray-600 dark:text-gray-300">
+        <p className="mt-4 text-gray-300">
           Edit{" "}
-          <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">
-            src/App.jsx
+          <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">
+            src/App.tsx
           </code>{" "}
           and save to test HMR
         </p>
       </div>
-
-      <p className="text-gray-500 dark:text-gray-400 mt-8 text-center max-w-md">
+      <p className="text-gray-500">
         Click on the Vite and React logos to learn more
       </p>
     </div>
