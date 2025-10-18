@@ -1,8 +1,7 @@
-name: Deploy My Profile To GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches: ["main"]
 
 permissions:
@@ -16,34 +15,39 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    # Only run if PR was merged (not just closed)
-    if: github.event.pull_request.merged == true
+    name: Build and Deploy to GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
+        uses: actions/checkout@v4
+
       - name: Set up Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: "npm"
+          cache-dependency-path: "./frontend/package-lock.json"
+
       - name: Install dependencies
+        working-directory: ./frontend
         run: npm ci
+
       - name: Build
+        working-directory: ./frontend
         run: npm run build
+
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist"
+          path: "./frontend/dist"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
