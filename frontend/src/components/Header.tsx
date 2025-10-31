@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#171321] text-white py-4 px-6">
+    <header className="sticky top-0 bg-[#171321] text-white py-4 px-6 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* サイトロゴ */}
         <div className="flex items-center">
