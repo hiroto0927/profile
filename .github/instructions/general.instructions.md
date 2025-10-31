@@ -6,7 +6,8 @@
 
 AI アシスタントは、タスクを実行する際に以下のルールを参照すること。
 
-React に関するルール: .github/instructions/react.instructions.md
+- React に関するルール: .github/instructions/react.instructions.md
+- 要件定義に関するルール: .github/instructions/requirements.instructions.md
 
 # タスク実行に関する指示
 
