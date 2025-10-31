@@ -1,24 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import PageCard from "./PageCard";
+import GeometricBackground from "./GeometricBackground";
+import GitHubActivity from "./GitHubActivity";
 import { FaUser, FaCode, FaBook } from "react-icons/fa";
+import {
+  useTypingAnimation,
+  getTimeBasedGreeting,
+} from "../hooks/useTypingAnimation";
 
 const MainContent: React.FC = () => {
+  const [greeting] = useState(getTimeBasedGreeting());
+  const { displayText, isComplete } = useTypingAnimation(greeting, 150);
+
   return (
-    <main className="flex-1 py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-6xl mx-auto">
-        {/* 歓迎メッセージ */}
+    <main className="flex-1 py-16 px-6 bg-gradient-to-b from-gray-50 to-white relative">
+      {/* ジオメトリックパターン背景 */}
+      <GeometricBackground />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* コードブロック形式の歓迎メッセージ */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#171321] mb-6">
-            こんにちは
-            <span className="inline-block ml-3 animate-wave">✋</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-            Hiroto Desu.の部屋へようこそ！
-          </p>
+          <div className="max-w-2xl mx-auto bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden">
+            {/* コードエディタのヘッダー */}
+            <div className="bg-[#2d2d2d] px-4 py-3 flex items-center space-x-2">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <div className="text-gray-400 text-sm font-mono ml-4">
+                welcome.js
+              </div>
+            </div>
+
+            {/* コードブロック内容 */}
+            <div className="p-6 font-mono text-left">
+              <div className="text-gray-500 text-sm mb-2">
+                <span className="text-green-400">1</span>
+                <span className="ml-4 text-gray-400">
+                  // Welcome to Hiroto's world
+                </span>
+              </div>
+              <div className="text-gray-500 text-sm mb-2">
+                <span className="text-green-400">2</span>
+                <span className="ml-4 text-blue-400">function</span>
+                <span className="text-yellow-300"> displayGreeting</span>
+                <span className="text-white">() &#123;</span>
+              </div>
+              <div className="text-gray-500 text-sm mb-2">
+                <span className="text-green-400">3</span>
+                <span className="ml-8 text-blue-400">const</span>
+                <span className="text-white"> greeting = </span>
+                <span className="text-orange-400">&quot;</span>
+                <span className="text-orange-400">
+                  {displayText}
+                  {isComplete && "✋"}
+                  {!isComplete && (
+                    <span className="animate-pulse text-white">|</span>
+                  )}
+                </span>
+                <span className="text-orange-400">&quot;;</span>
+              </div>
+              <div className="text-gray-500 text-sm mb-2">
+                <span className="text-green-400">4</span>
+                <span className="ml-8 text-blue-400">const</span>
+                <span className="text-white"> message = </span>
+                <span className="text-orange-400">
+                  &quot;Hiroto Desu.の部屋へようこそ！&quot;;
+                </span>
+              </div>
+              <div className="text-gray-500 text-sm mb-2">
+                <span className="text-green-400">5</span>
+                <span className="ml-8 text-purple-400">console</span>
+                <span className="text-white">.</span>
+                <span className="text-blue-400">log</span>
+                <span className="text-white">(greeting, message);</span>
+              </div>
+              <div className="text-gray-500 text-sm">
+                <span className="text-green-400">6</span>
+                <span className="ml-4 text-white">&#125;</span>
+              </div>
+            </div>
+
+            {/* 実行結果風表示 */}
+            {isComplete && (
+              <div className="bg-[#0c0c0c] px-6 py-4 border-t border-gray-700">
+                <div className="text-gray-400 text-xs mb-2">// Output:</div>
+                <div className="text-green-300 font-mono text-sm">
+                  {greeting}✋ Hiroto Desu.の部屋へようこそ！
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* ページリンクカード */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
           {/* プロフィールページ */}
           <PageCard
             title="プロフィール"
@@ -42,6 +119,11 @@ const MainContent: React.FC = () => {
             link="/diary"
             icon={<FaBook className="w-12 h-12" />}
           />
+        </div>
+
+        {/* GitHub活動の可視化 */}
+        <div className="max-w-md mx-auto">
+          <GitHubActivity />
         </div>
       </div>
     </main>
