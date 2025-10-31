@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/* 手を振るアニメーション */
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 1s ease-in-out infinite;
+  transform-origin: 50% 100%; /* 手の真下を軸にして回転 */
+}
