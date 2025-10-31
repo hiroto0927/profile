@@ -26,7 +26,7 @@ const GeometricBackground: React.FC = () => {
       <div className="absolute top-1/4 right-1/3 text-[#4A90E2] opacity-10 text-xs font-mono animate-fade-in-out delay-2000">
         &#123;&#125;
       </div>
-      
+
       {/* 追加のプログラミング要素 */}
       <div className="absolute top-16 left-1/3 text-[#4A90E2] opacity-8 text-sm font-mono animate-fade-in-out delay-3000">
         class
