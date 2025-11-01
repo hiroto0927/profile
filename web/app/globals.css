@@ -1,1 +1,161 @@
 @import "tailwindcss";
+
+/* 手を振るアニメーション */
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 1s ease-in-out infinite;
+  transform-origin: 50% 100%; /* 手の真下を軸にして回転 */
+}
+
+/* ジオメトリックパターン用アニメーション */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(12deg);
+  }
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-out {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 12s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 6s ease-in-out infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+.delay-3000 {
+  animation-delay: 3s;
+}
+
+.delay-4000 {
+  animation-delay: 4s;
+}
+
+.delay-5000 {
+  animation-delay: 5s;
+}
+
+.delay-6000 {
+  animation-delay: 6s;
+}
+
+.delay-7000 {
+  animation-delay: 7s;
+}
+
+.delay-8000 {
+  animation-delay: 8s;
+}
+
+.delay-9000 {
+  animation-delay: 9s;
+}
+
+.delay-10000 {
+  animation-delay: 10s;
+}
+
+.delay-11000 {
+  animation-delay: 11s;
+}
+
+.delay-12000 {
+  animation-delay: 12s;
+}
+
+.delay-13000 {
+  animation-delay: 13s;
+}
+
+.delay-14000 {
+  animation-delay: 14s;
+}
