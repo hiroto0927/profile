@@ -35,11 +35,11 @@ const Header: React.FC = () => {
             </svg>
           </a>
 
-          {/* Gmail リンク */}
+          {/* Yahoo Mail リンク */}
           <a
-            href="mailto:hiroto0927@gmail.com"
+            href="mailto:hiroto_0927_123@yahoo.co.jp"
             className="text-white hover:text-[#4A90E2] transition-colors duration-300"
-            aria-label="Gmail"
+            aria-label="Yahoo Mail"
           >
             <svg
               className="w-6 h-6"
