@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaGithub, FaCode, FaStar } from "react-icons/fa";
+import axios from "axios";
 
 interface GitHubStats {
   totalCommits: number;
   totalRepos: number;
   totalStars: number;
-  isLoading: boolean;
   lastUpdated: string;
 }
 
@@ -14,96 +14,48 @@ interface GitHubRepo {
   size: number;
 }
 
-const GitHubActivity: React.FC = () => {
-  const [stats, setStats] = useState<GitHubStats>({
-    totalCommits: 0,
-    totalRepos: 0,
-    totalStars: 0,
-    isLoading: true,
-    lastUpdated: "",
-  });
+async function fetchGitHubStats(): Promise<GitHubStats> {
+  const username = "hiroto0927";
 
-  useEffect(() => {
-    const fetchGitHubStats = async () => {
-      try {
-        setStats((prev) => ({ ...prev, isLoading: true }));
-
-        // GitHub API呼び出し（制限を考慮してモックデータも準備）
-        const username = "hiroto0927";
-
-        try {
-          // リポジトリ情報を取得
-          const reposResponse = await fetch(
-            `https://api.github.com/users/${username}/repos?per_page=100`
-          );
-
-          if (reposResponse.ok) {
-            const repos: GitHubRepo[] = await reposResponse.json();
-            const totalRepos = repos.length;
-            const totalStars = repos.reduce(
-              (sum: number, repo: GitHubRepo) => sum + repo.stargazers_count,
-              0
-            );
-
-            // 簡易的なコミット数計算（実際のAPIは制限があるため推定値）
-            const estimatedCommits = repos.reduce(
-              (sum: number, repo: GitHubRepo) => {
-                // リポジトリのサイズとプッシュ回数から推定
-                return sum + Math.max(1, Math.floor(repo.size / 10));
-              },
-              0
-            );
-
-            setStats({
-              totalCommits: estimatedCommits,
-              totalRepos,
-              totalStars,
-              isLoading: false,
-              lastUpdated: new Date().toLocaleTimeString("ja-JP"),
-            });
-          } else {
-            throw new Error("API制限または接続エラー");
-          }
-        } catch {
-          // フォールバック用のモックデータ
-          console.log("GitHub API制限のため、モックデータを表示します");
-          setStats({
-            totalCommits: 150,
-            totalRepos: 12,
-            totalStars: 8,
-            isLoading: false,
-            lastUpdated: new Date().toLocaleTimeString("ja-JP"),
-          });
-        }
-      } catch (error) {
-        console.error("GitHub stats fetch error:", error);
-        setStats((prev) => ({ ...prev, isLoading: false }));
-      }
-    };
-
-    fetchGitHubStats();
-
-    // 1時間ごとに更新
-    const interval = setInterval(fetchGitHubStats, 3600000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (stats.isLoading) {
-    return (
-      <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-        <div className="flex items-center space-x-3 mb-4">
-          <FaGithub className="text-[#4A90E2] text-2xl" />
-          <h3 className="text-lg font-bold text-[#171321]">GitHub Activity</h3>
-        </div>
-        <div className="animate-pulse space-y-3">
-          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-          <div className="h-4 bg-gray-200 rounded w-2/3"></div>
-        </div>
-      </div>
+  try {
+    // GitHub API呼び出し（制限を考慮してモックデータも準備）
+    const reposResponse = await axios.get<GitHubRepo[]>(
+      `https://api.github.com/users/${username}/repos?per_page=100`
     );
+
+    const repos = reposResponse.data;
+    const totalRepos = repos.length;
+    const totalStars = repos.reduce(
+      (sum: number, repo: GitHubRepo) => sum + repo.stargazers_count,
+      0
+    );
+
+    // 簡易的なコミット数計算（実際のAPIは制限があるため推定値）
+    const estimatedCommits = repos.reduce((sum: number, repo: GitHubRepo) => {
+      // リポジトリのサイズとプッシュ回数から推定
+      return sum + Math.max(1, Math.floor(repo.size / 10));
+    }, 0);
+
+    return {
+      totalCommits: estimatedCommits,
+      totalRepos,
+      totalStars,
+      lastUpdated: new Date().toLocaleTimeString("ja-JP"),
+    };
+  } catch (error) {
+    // フォールバック用のモックデータ
+    console.log("GitHub API制限のため、モックデータを表示します", error);
+    return {
+      totalCommits: 150,
+      totalRepos: 12,
+      totalStars: 8,
+      lastUpdated: new Date().toLocaleTimeString("ja-JP"),
+    };
   }
+}
+
+const GitHubActivity: React.FC = async () => {
+  const stats = await fetchGitHubStats();
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
