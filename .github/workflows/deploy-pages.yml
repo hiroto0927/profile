@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    # 毎日 日本時間 00:00 (UTC 15:00) に実行
+    - cron: "0 15 * * *"
 
 permissions:
   contents: read
