@@ -46,9 +46,9 @@ async function fetchGitHubStats(): Promise<GitHubStats> {
     // フォールバック用のモックデータ
     console.log("GitHub API制限のため、モックデータを表示します", error);
     return {
-      totalCommits: 150,
-      totalRepos: 12,
-      totalStars: 8,
+      totalCommits: 0,
+      totalRepos: 0,
+      totalStars: 0,
       lastUpdated: new Date().toLocaleTimeString("ja-JP"),
     };
   }

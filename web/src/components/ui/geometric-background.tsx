@@ -28,40 +28,40 @@ const GeometricBackground: React.FC = () => {
       </div>
 
       {/* 追加のプログラミング要素 */}
-      <div className="absolute top-16 left-1/3 text-[#4A90E2] opacity-8 text-sm font-mono animate-fade-in-out delay-3000">
+      <div className="absolute top-16 left-1/3 text-[#4A90E2] opacity-20 text-sm font-mono animate-fade-in-out delay-3000">
         class
       </div>
-      <div className="absolute bottom-40 left-20 text-[#171321] opacity-8 text-sm font-mono animate-fade-in-out delay-4000">
+      <div className="absolute bottom-40 left-20 text-[#171321] opacity-20 text-sm font-mono animate-fade-in-out delay-4000">
         interface
       </div>
-      <div className="absolute top-2/3 right-10 text-[#4A90E2] opacity-8 text-sm font-mono animate-fade-in-out delay-5000">
+      <div className="absolute top-2/3 right-10 text-[#4A90E2] opacity-20 text-sm font-mono animate-fade-in-out delay-5000">
         trait
       </div>
-      <div className="absolute top-80 left-2/3 text-[#171321] opacity-8 text-xs font-mono animate-fade-in-out delay-6000">
+      <div className="absolute top-80 left-2/3 text-[#171321] opacity-20 text-xs font-mono animate-fade-in-out delay-6000">
         const =&gt;
       </div>
-      <div className="absolute bottom-60 right-1/2 text-[#4A90E2] opacity-8 text-xs font-mono animate-fade-in-out delay-7000">
+      <div className="absolute bottom-60 right-1/2 text-[#4A90E2] opacity-20 text-xs font-mono animate-fade-in-out delay-7000">
         async/await
       </div>
-      <div className="absolute top-32 right-20 text-[#171321] opacity-8 text-xs font-mono animate-fade-in-out delay-8000">
+      <div className="absolute top-32 right-20 text-[#171321] opacity-20 text-xs font-mono animate-fade-in-out delay-8000">
         import
       </div>
-      <div className="absolute bottom-16 left-1/2 text-[#4A90E2] opacity-8 text-xs font-mono animate-fade-in-out delay-9000">
+      <div className="absolute bottom-16 left-1/2 text-[#4A90E2] opacity-20 text-xs font-mono animate-fade-in-out delay-9000">
         export
       </div>
-      <div className="absolute top-1/5 left-1/5 text-[#171321] opacity-8 text-xs font-mono animate-fade-in-out delay-10000">
+      <div className="absolute top-1/5 left-1/5 text-[#171321] opacity-20 text-xs font-mono animate-fade-in-out delay-10000">
         typeof
       </div>
-      <div className="absolute bottom-1/5 right-1/5 text-[#4A90E2] opacity-8 text-xs font-mono animate-fade-in-out delay-11000">
+      <div className="absolute bottom-1/5 right-1/5 text-[#4A90E2] opacity-20 text-xs font-mono animate-fade-in-out delay-11000">
         extends
       </div>
-      <div className="absolute top-3/5 left-1/6 text-[#171321] opacity-8 text-xs font-mono animate-fade-in-out delay-12000">
+      <div className="absolute top-3/5 left-1/6 text-[#171321] opacity-20 text-xs font-mono animate-fade-in-out delay-12000">
         useState
       </div>
-      <div className="absolute bottom-2/5 right-1/6 text-[#4A90E2] opacity-8 text-xs font-mono animate-fade-in-out delay-13000">
+      <div className="absolute bottom-2/5 right-1/6 text-[#4A90E2] opacity-20 text-xs font-mono animate-fade-in-out delay-13000">
         useEffect
       </div>
-      <div className="absolute top-1/6 right-2/5 text-[#171321] opacity-8 text-xs font-mono animate-fade-in-out delay-14000">
+      <div className="absolute top-1/6 right-2/5 text-[#171321] opacity-20 text-xs font-mono animate-fade-in-out delay-14000">
         return
       </div>
     </div>

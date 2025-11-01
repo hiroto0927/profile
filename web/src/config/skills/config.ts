@@ -80,20 +80,12 @@ export const skills: Skill[] = [
     years: "1年+",
   },
   {
-    name: "Vite",
-    category: "実用",
-    iconComponent: SiVite,
-    iconColor: "#646CFF",
-    description: "高速フロントエンドビルドツール",
-    years: "2年+",
-  },
-  {
     name: "AWS",
-    category: "経験あり",
+    category: "実用",
     iconComponent: SiAmazon,
     iconColor: "#FF9900",
     description: "クラウドインフラ",
-    years: "1年",
+    years: "2年",
   },
   {
     name: "Rust",
@@ -125,7 +117,7 @@ export const skills: Skill[] = [
     iconComponent: FaJava,
     iconColor: "#ED8B00",
     description: "エンタープライズ開発",
-    years: "2年",
+    years: "2ヶ月",
   },
   {
     name: "DDD",
