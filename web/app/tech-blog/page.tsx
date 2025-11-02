@@ -33,7 +33,7 @@ export default async function TechBlogPage() {
   const articles = await getArticles();
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-50 to-blue-50">
       <Header />
 
       <main className="flex-1 container mx-auto px-6 py-12">
@@ -44,8 +44,7 @@ export default async function TechBlogPage() {
               Tech Blog
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              技術に関する記事やブログを紹介しています。
-              プログラミングや開発に関する知見を共有しています。
+              技術や開発について思ったことや学んだことを発信しています。
             </p>
           </section>
 

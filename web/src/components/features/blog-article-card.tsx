@@ -1,24 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { BlogArticle } from "../../../types/blog";
+import { formatDate } from "../../utils/format-date";
 
 interface BlogArticleCardProps {
   article: BlogArticle;
 }
 
 const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
-  const formatDate = (dateString: string) => {
-    try {
-      return new Date(dateString).toLocaleDateString("ja-JP", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    } catch {
-      return dateString;
-    }
-  };
-
   return (
     <a
       href={article.link}
@@ -79,23 +68,26 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
 
       {/* モバイル用: ユーザーアイコン、公開日、タイトル */}
       <div className="md:hidden flex flex-col flex-1 p-4">
-        {/* ユーザーアイコン */}
-        {article.userIconUrl && (
-          <div className="w-8 h-8 mb-2 shrink-0">
-            <Image
-              src={article.userIconUrl}
-              alt="user icon"
-              width={32}
-              height={32}
-              className="w-full h-full rounded-full object-cover"
-            />
-          </div>
-        )}
+        {/* アイコンと日付を横並び */}
+        <div className="flex items-center gap-2 mb-3">
+          {/* ユーザーアイコン */}
+          {article.userIconUrl && (
+            <div className="w-6 h-6 shrink-0">
+              <Image
+                src={article.userIconUrl}
+                alt="user icon"
+                width={24}
+                height={24}
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
+          )}
 
-        {/* 公開日 */}
-        <time className="text-xs text-gray-500 mb-2">
-          {formatDate(article.pubDate)}
-        </time>
+          {/* 公開日 */}
+          <time className="text-xs text-gray-500">
+            {formatDate(article.pubDate)}
+          </time>
+        </div>
 
         {/* タイトル */}
         <h3 className="text-sm font-bold text-[#171321]">
