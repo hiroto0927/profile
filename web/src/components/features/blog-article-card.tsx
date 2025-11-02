@@ -66,42 +66,28 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
         </div>
       </div>
 
-      {/* モバイル用: ユーザーアイコン、公開日、タイトル */}
+      {/* モバイル用: 公開日、サムネイル画像 */}
       <div className="md:hidden flex flex-col flex-1 p-4">
-        {/* アイコンと日付を横並び */}
+        {/* 公開日 */}
         <div className="flex items-center gap-2 mb-3">
-          {/* ユーザーアイコン */}
-          {article.userIconUrl && (
-            <div className="w-6 h-6 shrink-0">
-              <Image
-                src={article.userIconUrl}
-                alt="user icon"
-                width={24}
-                height={24}
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-          )}
-
-          {/* 公開日 */}
-          <time className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500">投稿日</p>
+          <time className="text-xs text-gray-700 font-medium">
             {formatDate(article.pubDate)}
           </time>
         </div>
 
-        {/* タイトル */}
-        <h3 className="text-sm font-bold text-[#171321]">
-          <span
-            className="block overflow-hidden text-ellipsis"
-            style={{
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-            }}
-          >
-            {article.title}
-          </span>
-        </h3>
+        {/* サムネイル画像 */}
+        {article.thumbnailUrl && (
+          <div className="aspect-video overflow-hidden rounded">
+            <Image
+              src={article.thumbnailUrl}
+              alt={article.title}
+              width={400}
+              height={225}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
       </div>
     </a>
   );
