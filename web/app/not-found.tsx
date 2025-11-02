@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#171321] text-white px-4">
       <div className="text-center space-y-8 max-w-2xl">
         <div className="space-y-4">
-          <h1 className="text-9xl font-bold text-[#4A90E2] animate-pulse">
+          <h1 className="text-6xl md:text-9xl font-bold text-[#4A90E2] animate-pulse">
             404
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold">
@@ -19,7 +19,7 @@ export default function NotFound() {
         <div className="pt-4">
           <Link
             href="/"
-            className="inline-block px-8 py-4 bg-[#4A90E2] hover:bg-[#357ABD] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-block px-8 py-4 bg-[#4A90E2] hover:bg-[#3a7ec8] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             ホーム画面に戻る
           </Link>
