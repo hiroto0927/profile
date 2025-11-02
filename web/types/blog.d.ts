@@ -4,6 +4,7 @@ export interface BlogArticle {
   description: string;
   pubDate: string;
   thumbnailUrl?: string;
+  userIconUrl?: string;
 }
 
 export interface RssFeed {
@@ -31,6 +32,9 @@ export interface RssItem {
 
 export interface RssChannel {
   item: RssItem[];
+  image?: Array<{
+    url: string[];
+  }>;
 }
 
 export interface RssResult {

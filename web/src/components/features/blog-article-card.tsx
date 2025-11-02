@@ -20,9 +20,15 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
   };
 
   return (
-    <article className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+    <a
+      href={article.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col hover:shadow-xl transition-shadow"
+    >
+      {/* サムネイル画像 (PC・タブレットのみ) */}
       {article.thumbnailUrl && (
-        <div className="aspect-video overflow-hidden">
+        <div className="hidden md:block aspect-video overflow-hidden">
           <Image
             src={article.thumbnailUrl}
             alt={article.title}
@@ -33,12 +39,11 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
         </div>
       )}
 
-      <div className="p-6">
+      {/* PC・タブレット用 */}
+      <div className="hidden md:flex flex-col flex-1 p-6">
+        {/* タイトル */}
         <h3 className="text-xl font-bold text-[#171321] mb-3">
-          <a
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
+          <span
             className="block overflow-hidden text-ellipsis"
             style={{
               display: "-webkit-box",
@@ -47,12 +52,13 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
             }}
           >
             {article.title}
-          </a>
+          </span>
         </h3>
 
+        {/* 説明文 */}
         {article.description && (
           <p
-            className="text-gray-600 text-sm mb-4 overflow-hidden text-ellipsis"
+            className="text-gray-600 text-sm mb-4 overflow-hidden text-ellipsis flex-1"
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -63,22 +69,49 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ article }) => {
           </p>
         )}
 
-        <div className="flex justify-between items-center">
+        {/* 公開日 */}
+        <div>
           <time className="text-xs text-gray-500">
             {formatDate(article.pubDate)}
           </time>
-
-          <a
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#4A90E2] text-sm font-medium"
-          >
-            記事を読む →
-          </a>
         </div>
       </div>
-    </article>
+
+      {/* モバイル用: ユーザーアイコン、公開日、タイトル */}
+      <div className="md:hidden flex flex-col flex-1 p-4">
+        {/* ユーザーアイコン */}
+        {article.userIconUrl && (
+          <div className="w-8 h-8 mb-2 shrink-0">
+            <Image
+              src={article.userIconUrl}
+              alt="user icon"
+              width={32}
+              height={32}
+              className="w-full h-full rounded-full object-cover"
+            />
+          </div>
+        )}
+
+        {/* 公開日 */}
+        <time className="text-xs text-gray-500 mb-2">
+          {formatDate(article.pubDate)}
+        </time>
+
+        {/* タイトル */}
+        <h3 className="text-sm font-bold text-[#171321]">
+          <span
+            className="block overflow-hidden text-ellipsis"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+            }}
+          >
+            {article.title}
+          </span>
+        </h3>
+      </div>
+    </a>
   );
 };
 

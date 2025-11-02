@@ -23,6 +23,9 @@ export async function parseRssFeed(url: string): Promise<BlogArticle[]> {
           const pubDate = item.pubDate?.[0] || "";
           const enclosure = item.enclosure?.[0];
           const thumbnailUrl = enclosure?.$?.url || undefined;
+          // rss.channel.image.url からユーザーアイコンを取得
+          const userIconUrl =
+            result?.rss?.channel?.[0]?.image?.[0]?.url?.[0] || undefined;
 
           if (title && link) {
             articles.push({
@@ -31,6 +34,7 @@ export async function parseRssFeed(url: string): Promise<BlogArticle[]> {
               description,
               pubDate,
               thumbnailUrl,
+              userIconUrl,
             });
           }
         });
