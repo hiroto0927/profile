@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaCode } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Header: React.FC = () => {
@@ -19,6 +19,16 @@ const Header: React.FC = () => {
 
         {/* ナビゲーションメニュー */}
         <nav className="flex items-center space-x-6">
+          {/* Tech Blog リンク */}
+          <Link
+            href="/tech-blog"
+            className="text-white hover:text-[#4A90E2] transition-colors duration-300 flex items-center space-x-1"
+            aria-label="Tech Blog"
+          >
+            <FaCode className="w-5 h-5" />
+            <span className="hidden sm:inline">Tech Blog</span>
+          </Link>
+
           {/* GitHub リンク */}
           <a
             href="https://github.com/hiroto0927"
