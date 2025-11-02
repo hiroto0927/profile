@@ -7,6 +7,16 @@ const nextConfig: NextConfig = {
   assetPrefix: "/profile",
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+      },
+    ],
   },
   trailingSlash: true,
 };
