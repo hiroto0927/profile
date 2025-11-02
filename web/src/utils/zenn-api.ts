@@ -1,39 +1,16 @@
-import axios from "axios";
 import { ZennArticle } from "@/types/blog";
 
-const ZENN_USERNAME = "hirohiroeng";
-const ZENN_API_BASE = "https://zenn.dev/api";
-
 /**
- * Zennから指定したユーザーの記事一覧を取得する
- * @param page ページ番号（デフォルト: 1）
- * @param order ソート順（デフォルト: latest）
+ * ビルド時に生成されたZenn記事データを取得する
  * @returns Promise<ZennArticle[]>
  */
-export async function fetchZennArticles(
-  page: number = 1,
-  order: "latest" | "liked" = "latest"
-): Promise<ZennArticle[]> {
+export async function getStaticZennArticles(): Promise<ZennArticle[]> {
   try {
-    const response = await axios.get(
-      `${ZENN_API_BASE}/articles`,
-      {
-        params: {
-          username: ZENN_USERNAME,
-          page: page,
-          order: order,
-        },
-        headers: {
-          'Accept': 'application/json',
-        },
-        timeout: 10000, // 10秒タイムアウト
-      }
-    );
-
-    return response.data.articles || [];
+    // Static import for build-time data
+    const articles = await import("@/.contents/zenn-articles.json");
+    return articles.default || [];
   } catch (error) {
-    console.error("Error fetching Zenn articles:", error);
-    // エラー時は空配列を返す
+    console.error("Error loading static Zenn articles:", error);
     return [];
   }
 }

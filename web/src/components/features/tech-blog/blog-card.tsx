@@ -6,7 +6,8 @@ import { formatPublishedDate, formatReadingTime } from "@/src/utils/zenn-api";
 
 export default function BlogCard({ article }: BlogCardProps) {
   const handleCardClick = () => {
-    window.open(`https://zenn.dev/${article.user.username}/articles/${article.slug}`, '_blank');
+    // RSSフィードから取得したlinkをそのまま使用
+    window.open(article.link || `https://zenn.dev/${article.user.username}/articles/${article.slug}`, '_blank');
   };
 
   return (

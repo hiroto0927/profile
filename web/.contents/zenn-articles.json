@@ -1,0 +1,178 @@
+[
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/2d6e26976a668a",
+    "title": "【AWS】AssumeRoleってなんや！？",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "2d6e26976a668a",
+    "content": "はじめにIAM って難しいですよね。AWS 公式を見るといっぱいあって、よくわかんないし、ドキュメント見ても「わからん！」ってなる人が多数だと思います。私もその一人です。最近、その IAM 権限まわりで AWS Security Token Service と言われるサービスの中にあるsts:AssumeRoleという権限に、ぶち当たりました。あとで詳細について記載しますが、中身を理解せず使用するとリスクが高い権限です。そこで今回、私が調査し理解した内容をナレッジとして残したいと思います。 本記事の目的今回の目的は、下記です。AWS を利用する人たちにAssume...",
+    "link": "https://zenn.dev/hirohiroeng/articles/2d6e26976a668a",
+    "published_at": "2024-10-09T14:34:57.000Z",
+    "created_at": "2024-10-09T14:34:57.000Z",
+    "updated_at": "2024-10-09T14:34:57.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/07df29fdc226a6",
+    "title": "冪等性について学ぶ",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "07df29fdc226a6",
+    "content": "今回の目的こんにちは。API 設計について学ぶ機会があり、その中で「冪等性(べきとうせい)」というワードを知りました。今後、 API 設計をするためには、この設計概念は知っておくべきと感じ、意味について私なりに解釈することを目的に今回まとめます。もし、間違いや指摘・意見等があればコメントよろしくお願いいたします。 冪等性の理解まず、冪等性の意味について抑えようと思います。 冪等性とは個人的に聞きなれない言葉ですが、冪等性とは下記のような意味です。(参考：リンク)冪等性（idempotence）とは、ある操作を何度繰り返しても結果が同じになるという性質。元は数学の概...",
+    "link": "https://zenn.dev/hirohiroeng/articles/07df29fdc226a6",
+    "published_at": "2024-06-30T19:31:46.000Z",
+    "created_at": "2024-06-30T19:31:46.000Z",
+    "updated_at": "2024-06-30T19:31:46.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/46f4fb5dc9aae1",
+    "title": "tailwindでテーブルの作成",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "46f4fb5dc9aae1",
+    "content": "やりたいこと最初の 1 列目と 1 行目（カラムの行）を固定したテーブルを作成する。 完成品 コード<div className=\" ml-[50px] whitespace-nowrap overflow-auto h-[500px] w-[50%] mt-[100px] top-0\">  <table className=\"table-auto\">    <thead className=\" sticky top-0 z-10 \">      <tr className=\"bg-gray-200\">      ...",
+    "link": "https://zenn.dev/hirohiroeng/articles/46f4fb5dc9aae1",
+    "published_at": "2023-01-28T03:43:51.000Z",
+    "created_at": "2023-01-28T03:43:51.000Z",
+    "updated_at": "2023-01-28T03:43:51.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/c02ed3f2d72fb6",
+    "title": "自分用メモ useReducer × useContextの使い方",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "c02ed3f2d72fb6",
+    "content": "参考記事https://zenn.dev/sorye/articles/usereducer-and-usecontext-in-typescript 使い方stateとactionを定義するreducer.tstype State = {  CountState: number;  ChangeValue: number;};type Action =  | {      type: \"countUp\";    }  | {      type: \"countDown\";    }  | {      type: \"change...",
+    "link": "https://zenn.dev/hirohiroeng/articles/c02ed3f2d72fb6",
+    "published_at": "2023-01-14T02:10:14.000Z",
+    "created_at": "2023-01-14T02:10:14.000Z",
+    "updated_at": "2023-01-14T02:10:14.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/3cba23072bde39",
+    "title": "ハンズオンで学ぶ、初心者向けのFastAPI～その2～",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "3cba23072bde39",
+    "content": "はじめに前回に続き第二回目のfastapiに関する記事です。前回の記事を未読の方は、前回の記事を読んで頂ければと思います。https://zenn.dev/hirohiroeng/articles/eb7e56a31383c1今回は、DB との接続を行いデータの処理をやってみようと思います。まず今回、新しく使用するフレームワークを紹介しようと思います。 今回新しく使用するフレームワーク今回、新しく使用するフレームワークは前回の記事でもチラッと出しましたがsqlalchemyというフレームワークを使用します。（下記は、sqlalchemyの公式ドキュメントです。）http...",
+    "link": "https://zenn.dev/hirohiroeng/articles/3cba23072bde39",
+    "published_at": "2022-12-31T06:25:21.000Z",
+    "created_at": "2022-12-31T06:25:21.000Z",
+    "updated_at": "2022-12-31T06:25:21.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/eb7e56a31383c1",
+    "title": "ハンズオンで学ぶ、初心者向けのFastAPI",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "eb7e56a31383c1",
+    "content": "はじめに今回は、React から離れて Python のフレームワークであるFastAPIに触れてみました。色々と分かった事を自分の備忘録として、まとめていこうと思います。 参考にした記事https://fastapi.tiangolo.com/ja/ 触った理由フロントの知識も少しずつ深まり、バックエンドの知識や技術を知る必要が今後必要だと感じて、色々ネットを漁った結果FastAPIにたどり着いたという感じです。初心者が学ぶには丁度いいとのことで、今回学習してみました。まだまだFlaskの利用者が多いですが今後流行ればいいなと思います。 FastAPI の構造...",
+    "link": "https://zenn.dev/hirohiroeng/articles/eb7e56a31383c1",
+    "published_at": "2022-12-29T01:56:26.000Z",
+    "created_at": "2022-12-29T01:56:26.000Z",
+    "updated_at": "2022-12-29T01:56:26.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/3d1c142a3fe80b",
+    "title": "React + typescript カスタムフックの使い方",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "3d1c142a3fe80b",
+    "content": "はじめに今回は、カスタムフックについて紹介しようと思います。（なかなか、typescript の情報がなくて困りますね。。。）今回は、以下を参考にさせて頂きました。https://ja.reactjs.org/docs/hooks-custom.htmlでは、早速本題へ移りましょう。 カスタムフックとはカスタムフックとは、他のhooksをまとめるためのものです。useStateやuseEffectといった様々なhooksを一つのファイル内で使用して、コードが長くなってしまったことはないでしょうか？コードが長いと読む気も失せますし、チーム開発だとコードレビューが厳しいで...",
+    "link": "https://zenn.dev/hirohiroeng/articles/3d1c142a3fe80b",
+    "published_at": "2022-11-14T14:47:10.000Z",
+    "created_at": "2022-11-14T14:47:10.000Z",
+    "updated_at": "2022-11-14T14:47:10.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  },
+  {
+    "id": "https://zenn.dev/hirohiroeng/articles/cf92cc6b6eaff4",
+    "title": "React hooks + typescript useReucerの使い方",
+    "emoji": "📝",
+    "type": "tech",
+    "topics": [],
+    "published": true,
+    "slug": "cf92cc6b6eaff4",
+    "content": "はじめに今回は、Reactでは欠かせない便利機能の一つhooksについての紹介です。Reactのjsの記事は、色々情報はありますがtypescriptの記事がなかなかネットで調べても検索に出てこなくて、非常に困りナレッジとして残す意味も含めて、今回記事にしています。今回は、以下の記事を参考にさせて頂きました。以下の記事を書いた方は、会社の先輩でいつもお世話になっています。今回もお世話になります。 参考文献https://zenn.dev/sorye/articles/usereducer-and-usecontext-in-typescriptでは、早速本題に移りまし...",
+    "link": "https://zenn.dev/hirohiroeng/articles/cf92cc6b6eaff4",
+    "published_at": "2022-11-10T14:43:07.000Z",
+    "created_at": "2022-11-10T14:43:07.000Z",
+    "updated_at": "2022-11-10T14:43:07.000Z",
+    "likes_count": 0,
+    "comments_count": 0,
+    "reading_time": 1,
+    "user": {
+      "username": "hirohiroeng",
+      "name": "Hiroto",
+      "avatar_url": "https://github.com/hiroto0927.png"
+    }
+  }
+]

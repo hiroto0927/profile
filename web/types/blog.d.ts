@@ -8,6 +8,7 @@ export interface ZennArticle {
   published: boolean;
   slug: string;
   content: string;
+  link?: string; // RSS feedから取得したリンク
   published_at: string;
   created_at: string;
   updated_at: string;

@@ -27,11 +27,31 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TechBlogPage() {
+// 静的データを読み込む関数
+async function getZennArticles() {
+  try {
+    // ビルド時に生成されたJSONファイルを読み込み
+    const fs = await import("fs/promises");
+    const path = await import("path");
+    
+    const filePath = path.join(process.cwd(), ".contents", "zenn-articles.json");
+    const fileContent = await fs.readFile(filePath, "utf-8");
+    const articles = JSON.parse(fileContent);
+    
+    return articles;
+  } catch (error) {
+    console.error("Error loading Zenn articles:", error);
+    return [];
+  }
+}
+
+export default async function TechBlogPage() {
+  const articles = await getZennArticles();
+  
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <TechBlogContent />
+      <TechBlogContent articles={articles} />
       <Footer />
     </div>
   );
