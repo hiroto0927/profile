@@ -45,8 +45,7 @@ const ProfileSection: React.FC = () => {
               <div className="flex items-center gap-2 text-gray-700">
                 <FaBriefcase className="text-blue-500 w-5 h-5" />
                 <span>
-                  <strong>職業:</strong> 本職クラウドエンジニア？
-                  アプリも開発するよ！
+                  <strong>職業:</strong> クラウドエンジニア？ アプリもしてるよ。
                 </span>
               </div>
               <div className="flex items-center gap-2 text-gray-700">
