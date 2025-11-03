@@ -24,7 +24,6 @@ const MainContent: React.FC = async () => {
             description="私のバックグラウンド、スキル、経験について詳しくご紹介します。"
             link="/profile"
             icon={<FaUser className="w-12 h-12" />}
-            isComingSoon={true}
           />
 
           {/* Tech Blog ページ */}

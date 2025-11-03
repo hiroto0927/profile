@@ -8,14 +8,14 @@ import {
   SiNextdotjs,
   SiFastapi,
   SiDocker,
-  SiVite,
+  SiTailwindcss,
 } from "react-icons/si";
 import { RiGitlabFill } from "react-icons/ri";
 import { IconType } from "react-icons";
 
 export interface Skill {
   name: string;
-  category: "実用" | "学習中" | "経験あり";
+  category: "実務" | "学習中" | "経験あり";
   iconComponent: IconType;
   iconColor: string;
   description: string;
@@ -25,7 +25,7 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     name: "TypeScript",
-    category: "実用",
+    category: "実務",
     iconComponent: SiTypescript,
     iconColor: "#3178C6",
     description: "型安全性を重視した開発",
@@ -33,7 +33,7 @@ export const skills: Skill[] = [
   },
   {
     name: "React",
-    category: "実用",
+    category: "実務",
     iconComponent: FaReact,
     iconColor: "#61DAFB",
     description: "モダンなUIライブラリ",
@@ -41,7 +41,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Git",
-    category: "実用",
+    category: "実務",
     iconComponent: FaGitAlt,
     iconColor: "#F05032",
     description: "バージョン管理システム",
@@ -49,7 +49,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Python",
-    category: "実用",
+    category: "実務",
     iconComponent: FaPython,
     iconColor: "#3776AB",
     description: "データ分析・AI開発",
@@ -57,7 +57,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Docker",
-    category: "実用",
+    category: "実務",
     iconComponent: SiDocker,
     iconColor: "#2496ED",
     description: "コンテナ化技術",
@@ -65,7 +65,7 @@ export const skills: Skill[] = [
   },
   {
     name: "NextJS",
-    category: "実用",
+    category: "実務",
     iconComponent: SiNextdotjs,
     iconColor: "#000000",
     description: "フルスタックReactフレームワーク",
@@ -73,7 +73,7 @@ export const skills: Skill[] = [
   },
   {
     name: "FastAPI",
-    category: "実用",
+    category: "実務",
     iconComponent: SiFastapi,
     iconColor: "#009688",
     description: "高速Python APIフレームワーク",
@@ -81,11 +81,35 @@ export const skills: Skill[] = [
   },
   {
     name: "AWS",
-    category: "実用",
+    category: "実務",
     iconComponent: SiAmazon,
     iconColor: "#FF9900",
     description: "クラウドインフラ",
     years: "2年",
+  },
+  {
+    name: "Tailwind CSS",
+    category: "実務",
+    iconComponent: SiTailwindcss,
+    iconColor: "#06B6D4",
+    description: "ユーティリティファーストCSSフレームワーク",
+    years: "1年+",
+  },
+  {
+    name: "GitLab",
+    category: "実務",
+    iconComponent: RiGitlabFill,
+    iconColor: "#FC6D26",
+    description: "CI/CDツール",
+    years: "3年+",
+  },
+  {
+    name: "AWS CDK",
+    category: "実務",
+    iconComponent: SiAmazon,
+    iconColor: "#FF9900",
+    description: "Infrastructure as Code",
+    years: "1年+",
   },
   {
     name: "Rust",
@@ -104,14 +128,6 @@ export const skills: Skill[] = [
     years: "3ヶ月",
   },
   {
-    name: "CI/CD",
-    category: "経験あり",
-    iconComponent: RiGitlabFill,
-    iconColor: "#FC6D26",
-    description: "継続的インテグレーション",
-    years: "1年",
-  },
-  {
     name: "Java",
     category: "経験あり",
     iconComponent: FaJava,
@@ -121,7 +137,7 @@ export const skills: Skill[] = [
   },
   {
     name: "DDD",
-    category: "経験あり",
+    category: "学習中",
     iconComponent: FaCubes,
     iconColor: "#4A90E2",
     description: "ドメイン駆動設計",

@@ -13,10 +13,10 @@
 
 本 Web サイトは、以下のページで構成される。各ページの詳細な要件については、個別のドキュメントを参照すること。
 
-1. [ホーム画面](./requirements/home.instructions.md)
-2. [プロフィールページ](./requirements/profile.instructions.md)
-3. [Tech Blog ページ](./requirements/tech-blog.instructions.md)
-4. [404 エラーページ](./requirements/404.instructions.md)
+1. [ホーム画面](./home.instructions.md)
+2. [プロフィールページ](./profile.instructions.md)
+3. [Tech Blog ページ](./tech-blog.instructions.md)
+4. [404 エラーページ](./404.instructions.md)
 
 # 非機能要件
 
