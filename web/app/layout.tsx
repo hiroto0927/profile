@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     "フロントエンド",
     "バックエンド",
   ],
-  authors: [{ name: "Hiroto" }],
-  creator: "Hiroto",
+  authors: [{ name: "Hiroto Desu." }],
+  creator: "Hiroto Desu.",
   openGraph: {
     title: "Hiroto Desu.の部屋",
     description:
