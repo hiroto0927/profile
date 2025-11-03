@@ -20,6 +20,7 @@ export interface Skill {
   iconColor: string;
   description: string;
   years?: string;
+  url: string;
 }
 
 export const skills: Skill[] = [
@@ -30,6 +31,7 @@ export const skills: Skill[] = [
     iconColor: "#3178C6",
     description: "型安全性を重視した開発",
     years: "3年+",
+    url: "https://www.typescriptlang.org/",
   },
   {
     name: "React",
@@ -38,6 +40,7 @@ export const skills: Skill[] = [
     iconColor: "#61DAFB",
     description: "モダンなUIライブラリ",
     years: "3年+",
+    url: "https://react.dev/",
   },
   {
     name: "Git",
@@ -46,6 +49,7 @@ export const skills: Skill[] = [
     iconColor: "#F05032",
     description: "バージョン管理システム",
     years: "4年+",
+    url: "https://git-scm.com/",
   },
   {
     name: "Python",
@@ -54,6 +58,7 @@ export const skills: Skill[] = [
     iconColor: "#3776AB",
     description: "データ分析・AI開発",
     years: "2年+",
+    url: "https://www.python.org/",
   },
   {
     name: "Docker",
@@ -62,6 +67,7 @@ export const skills: Skill[] = [
     iconColor: "#2496ED",
     description: "コンテナ化技術",
     years: "2年+",
+    url: "https://www.docker.com/",
   },
   {
     name: "NextJS",
@@ -70,6 +76,7 @@ export const skills: Skill[] = [
     iconColor: "#000000",
     description: "フルスタックReactフレームワーク",
     years: "1年+",
+    url: "https://nextjs.org/",
   },
   {
     name: "FastAPI",
@@ -78,6 +85,7 @@ export const skills: Skill[] = [
     iconColor: "#009688",
     description: "高速Python APIフレームワーク",
     years: "1年+",
+    url: "https://fastapi.tiangolo.com/",
   },
   {
     name: "AWS",
@@ -86,6 +94,7 @@ export const skills: Skill[] = [
     iconColor: "#FF9900",
     description: "クラウドインフラ",
     years: "2年",
+    url: "https://aws.amazon.com/",
   },
   {
     name: "Tailwind CSS",
@@ -94,6 +103,7 @@ export const skills: Skill[] = [
     iconColor: "#06B6D4",
     description: "ユーティリティファーストCSSフレームワーク",
     years: "1年+",
+    url: "https://tailwindcss.com/",
   },
   {
     name: "GitLab",
@@ -102,6 +112,7 @@ export const skills: Skill[] = [
     iconColor: "#FC6D26",
     description: "CI/CDツール",
     years: "3年+",
+    url: "https://about.gitlab.com/",
   },
   {
     name: "AWS CDK",
@@ -110,6 +121,7 @@ export const skills: Skill[] = [
     iconColor: "#FF9900",
     description: "Infrastructure as Code",
     years: "1年+",
+    url: "https://aws.amazon.com/cdk/",
   },
   {
     name: "Rust",
@@ -118,6 +130,7 @@ export const skills: Skill[] = [
     iconColor: "#CE422B",
     description: "メモリ安全性と高速性を両立",
     years: "6ヶ月",
+    url: "https://www.rust-lang.org/",
   },
   {
     name: "Go",
@@ -126,6 +139,7 @@ export const skills: Skill[] = [
     iconColor: "#00ADD8",
     description: "高性能バックエンド",
     years: "3ヶ月",
+    url: "https://go.dev/",
   },
   {
     name: "Java",
@@ -134,6 +148,7 @@ export const skills: Skill[] = [
     iconColor: "#ED8B00",
     description: "エンタープライズ開発",
     years: "2ヶ月",
+    url: "https://www.java.com/",
   },
   {
     name: "DDD",
@@ -142,6 +157,7 @@ export const skills: Skill[] = [
     iconColor: "#4A90E2",
     description: "ドメイン駆動設計",
     years: "1年+",
+    url: "https://en.wikipedia.org/wiki/Domain-driven_design",
   },
   {
     name: "Kubernetes",
@@ -150,5 +166,6 @@ export const skills: Skill[] = [
     iconColor: "#326CE5",
     description: "コンテナオーケストレーション",
     years: "2ヶ月",
+    url: "https://kubernetes.io/",
   },
 ];

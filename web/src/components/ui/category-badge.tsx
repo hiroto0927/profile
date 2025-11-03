@@ -9,7 +9,7 @@ const categoryBadgeVariants = tv({
   },
   variants: {
     category: {
-      実用: {
+      実務: {
         badge: "bg-green-100 text-green-800 border-green-200",
       },
       経験あり: {
@@ -21,7 +21,7 @@ const categoryBadgeVariants = tv({
     },
   },
   defaultVariants: {
-    category: "実用",
+    category: "実務",
   },
 });
 
@@ -36,7 +36,7 @@ const CategoryBadge: React.FC<CategoryBadgeProps> = ({
   count,
   className = "",
 }) => {
-  const categoryKey = category as "実用" | "経験あり" | "学習中";
+  const categoryKey = category as "実務" | "経験あり" | "学習中";
   const styles = categoryBadgeVariants({ category: categoryKey });
 
   return (

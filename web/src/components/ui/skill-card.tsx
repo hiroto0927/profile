@@ -18,7 +18,7 @@ const skillCardVariants = tv({
   },
   variants: {
     category: {
-      実用: {
+      実務: {
         container: [
           "bg-green-50 border-green-200 hover:border-green-300 hover:bg-green-100",
         ],
@@ -45,7 +45,7 @@ const skillCardVariants = tv({
     },
   },
   defaultVariants: {
-    category: "実用",
+    category: "実務",
   },
 });
 
@@ -58,7 +58,12 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, category }) => {
   const IconComponent = skill.iconComponent;
 
   return (
-    <div className={styles.container()}>
+    <a
+      href={skill.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.container()}
+    >
       <div className={styles.header()}>
         <IconComponent
           className={styles.icon()}
@@ -78,7 +83,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, category }) => {
           boxShadow: `0 0 20px ${skill.iconColor}30`,
         }}
       />
-    </div>
+    </a>
   );
 };
 
