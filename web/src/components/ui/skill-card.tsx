@@ -18,7 +18,7 @@ const skillCardVariants = tv({
   },
   variants: {
     category: {
-      実用: {
+      実務: {
         container: [
           "bg-green-50 border-green-200 hover:border-green-300 hover:bg-green-100",
         ],
@@ -45,7 +45,7 @@ const skillCardVariants = tv({
     },
   },
   defaultVariants: {
-    category: "実用",
+    category: "実務",
   },
 });
 

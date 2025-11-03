@@ -47,7 +47,7 @@ const SkillsSection: React.FC = () => {
                 <SkillCard
                   key={skill.name}
                   skill={skill}
-                  category={category as "実用" | "学習中" | "経験あり"}
+                  category={category as "実務" | "学習中" | "経験あり"}
                 />
               ))}
             </div>
