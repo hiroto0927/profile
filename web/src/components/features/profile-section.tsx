@@ -11,7 +11,7 @@ const ProfileSection: React.FC = () => {
   return (
     <section className="mb-12">
       <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-8 md:items-center">
           {/* プロフィール写真 */}
           <div className="shrink-0">
             <div className="w-48 h-48 mx-auto md:mx-0 rounded-full overflow-hidden bg-linear-to-br from-blue-400 to-purple-500 p-1 shadow-xl">
