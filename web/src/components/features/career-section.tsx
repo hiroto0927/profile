@@ -23,7 +23,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2022年4月〜 現在",
-    title: "大手製造業に社内SEとして勤務",
+    title: "佐賀の製造会社に社内SEとして勤務",
     description: "",
     icon: "work",
   },
