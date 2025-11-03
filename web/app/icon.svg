@@ -1,5 +1,27 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="4" fill="#171321"/>
-  <path d="M10 8C8.5 8 8 9 8 10V12C8 13.5 7 14 5.5 14H4V18H5.5C7 18 8 18.5 8 20V22C8 23 8.5 24 10 24" stroke="#4A90E2" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M22 8C23.5 8 24 9 24 10V12C24 13.5 25 14 26.5 14H28V18H26.5C25 18 24 18.5 24 20V22C24 23 23.5 24 22 24" stroke="#4A90E2" stroke-width="2.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="grad6v4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="32" height="32" fill="#171321" rx="4"/>
+  
+  <!-- 外側の六角形フレーム -->
+  <polygon points="16,4 25,8 25,24 16,28 7,24 7,8" stroke="#4A90E2" stroke-width="1.2" fill="none" opacity="0.5" stroke-linejoin="round"/>
+  
+  <!-- 内側の六角形フレーム -->
+  <polygon points="16,6.5 23,10 23,22 16,25.5 9,22 9,10" stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  
+  <!-- 六角形の背景 -->
+  <polygon points="16,6.5 23,10 23,22 16,25.5 9,22 9,10" fill="url(#grad6v4)" opacity="0.05"/>
+  
+  <!-- "H" を六角形内に -->
+  <g opacity="0.95">
+    <rect x="11" y="11" width="1.8" height="10" fill="#FFFFFF" rx="0.9"/>
+    <rect x="11" y="15.5" width="5.2" height="1.5" fill="#4A90E2" rx="0.75"/>
+    <rect x="15.2" y="11" width="1.8" height="10" fill="#FFFFFF" rx="0.9"/>
+  </g>
 </svg>

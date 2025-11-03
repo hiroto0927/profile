@@ -1,0 +1,23 @@
+{
+  "name": "hiroto0927 Profile",
+  "short_name": "hiroto0927",
+  "description": "hiroto0927の自己紹介Webサイト",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171321",
+  "theme_color": "#4A90E2",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
