@@ -55,9 +55,12 @@ const SkillsSection: React.FC = () => {
                     {categorySkills.map((skill) => {
                       const Icon = skill.iconComponent;
                       return (
-                        <div
+                        <a
                           key={skill.name}
-                          className={`border rounded-full px-3 py-1.5 ${style.tag}`}
+                          href={skill.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`border rounded-full px-3 py-1.5 ${style.tag} transition-all duration-200 hover:shadow-md hover:scale-105`}
                         >
                           <div className="flex items-center gap-1.5">
                             <Icon
@@ -68,7 +71,7 @@ const SkillsSection: React.FC = () => {
                               {skill.name}
                             </span>
                           </div>
-                        </div>
+                        </a>
                       );
                     })}
                   </div>

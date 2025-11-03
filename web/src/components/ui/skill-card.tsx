@@ -58,7 +58,12 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, category }) => {
   const IconComponent = skill.iconComponent;
 
   return (
-    <div className={styles.container()}>
+    <a
+      href={skill.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.container()}
+    >
       <div className={styles.header()}>
         <IconComponent
           className={styles.icon()}
@@ -78,7 +83,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, category }) => {
           boxShadow: `0 0 20px ${skill.iconColor}30`,
         }}
       />
-    </div>
+    </a>
   );
 };
 
