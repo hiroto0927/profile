@@ -1,7 +1,7 @@
 {
-  "name": "hiroto0927 Profile",
-  "short_name": "hiroto0927",
-  "description": "hiroto0927の自己紹介Webサイト",
+  "name": "Hiroto Desu.の部屋",
+  "short_name": "Hiroto Desu.",
+  "description": "Hiroto Desu.の自己紹介Webサイト",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#171321",
