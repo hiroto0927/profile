@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     "フロントエンド",
     "バックエンド",
   ],
-  authors: [{ name: "Hiroto" }],
-  creator: "Hiroto",
+  authors: [{ name: "Hiroto Desu." }],
+  creator: "Hiroto Desu.",
   openGraph: {
     title: "Hiroto Desu.の部屋",
     description:
-      "エンジニアのスキルとプロジェクトを紹介するポートフォリオサイト",
+      "Hiroto Desu.のスキルとプロジェクトを紹介するポートフォリオサイトです。フロントエンド・バックエンド開発の経験や技術スタックについて掲載しています。",
     type: "website",
     locale: "ja_JP",
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Hiroto Desu.の部屋",
     description:
-      "エンジニアのスキルとプロジェクトを紹介するポートフォリオサイト",
+      "Hiroto Desu.のスキルとプロジェクトを紹介するポートフォリオサイトです。フロントエンド・バックエンド開発の経験や技術スタックについて掲載しています。",
   },
 };
 
