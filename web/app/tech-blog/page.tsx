@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../src/components/ui/header";
 import Footer from "../../src/components/ui/footer";
 import BlogArticlesGrid from "../../src/components/features/blog-articles-grid";
+import GeometricBackground from "../../src/components/ui/geometric-background";
 import { parseRssFeed } from "../../src/utils/rss-parser";
 import { rssFeeds } from "../../src/config/rss-feeds.config";
 import { BlogArticle } from "../../types/blog";
@@ -33,10 +34,13 @@ export default async function TechBlogPage() {
   const articles = await getArticles();
 
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-50 to-blue-50 relative">
+      {/* ジオメトリックパターン背景 */}
+      <GeometricBackground />
+      
       <Header />
 
-      <main className="flex-1 container mx-auto px-6 py-12">
+      <main className="flex-1 container mx-auto px-6 py-12 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* ページヘッダー */}
           <section className="text-center mb-16">

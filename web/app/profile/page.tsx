@@ -4,6 +4,7 @@ import Footer from "../../src/components/ui/footer";
 import ProfileSection from "../../src/components/features/profile-section";
 import SkillsSection from "../../src/components/features/profile-skills-section";
 import CareerSection from "../../src/components/features/career-section";
+import GeometricBackground from "../../src/components/ui/geometric-background";
 
 export const metadata = {
   title: "プロフィール | Hiroto Desu.",
@@ -13,10 +14,13 @@ export const metadata = {
 
 const ProfilePage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-50 to-blue-50 relative">
+      {/* ジオメトリックパターン背景 */}
+      <GeometricBackground />
+      
       <Header />
 
-      <main className="flex-1 py-12 px-6">
+      <main className="flex-1 py-12 px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* ページタイトル */}
           <div className="mb-8 text-center">
