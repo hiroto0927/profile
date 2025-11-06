@@ -22,7 +22,7 @@ const MainContent: React.FC = async () => {
           <PageCard
             title="プロフィール"
             description="私のバックグラウンド、スキル、経験について詳しくご紹介します。"
-            link="/profile"
+            link="/me"
             icon={<FaUser className="w-12 h-12" />}
           />
 
